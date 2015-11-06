@@ -1,0 +1,12 @@
+---
+:api_key: 04f2386a4a012478976ed7f3e78347a7
+:password: e23046dc3a70a3d845e2051dadfbf92f
+:store: brentwood-home.myshopify.com
+:theme_id: '74735363'
+:whitelist_files:
+- layout/
+- assets/
+- config/
+- snippets/
+- templates/
+- locales/
