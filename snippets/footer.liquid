@@ -2,7 +2,7 @@
 
   This snippet renders the footer at the bottom of each page.
 
-{% endcomment %}
+
 <footer class="footer">
   <div class="container">
 
@@ -35,3 +35,60 @@
 
   </div>
 </footer>
+{% endcomment %}
+
+<!-- Begin footer -->
+<footer>
+    <div class="container footer-wrapper">
+        <div class="row">
+            <div class="col-sm-2">
+                <h3>Company</h3>
+                <ul>
+                    {% for link in linklists.footer-company.links %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h3>Customer Service</h3>
+                <ul>
+                    {% for link in linklists.footer-customer-service.links %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h3>Community</h3>
+                <ul>
+                    {% if settings.enable_social_links %}
+                    {% include 'social-links' %}
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-sm-5">
+                <h3>Newsletter</h3>
+                <p class="ftnewsletter">Sign up for our latest news, product releases and events.</p>
+                {% include 'newsletter' %}
+                <div class="company_info">
+                    <ul class="address">
+                        <li>2301 E. 7th St. A-450</li>
+                        <li>Los Angeles, CA 90023</li>
+                        <li>Tel: 855.979.1416</li>
+                        <li>Email: hello@brentwoodhome.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="copyrights">Copyright &copy;2015 Brentwood Home. All Rights Reserved. 
+                    {% for link in linklists.footer-copyrights.links %}
+                    <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                    {% if forloop.last == false %} - {% endif %}
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer -->
