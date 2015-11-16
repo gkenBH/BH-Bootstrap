@@ -140,6 +140,10 @@
                     {
                         "value": "Verdana, Helvetica, Arial, sans-serif",
                         "label": "Verdana"
+                    },
+                    {
+                        "value": "'museo-sans', 'Cabin', sans-serif",
+                        "label": "Museo-sans"
                     }
                 ]
             },
@@ -159,6 +163,10 @@
                     {
                         "value": "Verdana, Helvetica, Arial, sans-serif",
                         "label": "Verdana"
+                    },
+                    {
+                        "value": "'garamond-premier-pro', 'Garamond', serif",
+                        "label": "Garamond"
                     }
                 ]
             },

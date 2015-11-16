@@ -12,7 +12,7 @@
       <!-- Brand / Logo -->
       <a class="navbar-brand" href="{{ shop.url }}" title="{{ shop.name }}">
         {% unless settings.logo_navbar == 'text' %}
-          <img src="{{ 'logo_navbar_image' | asset_url }}" alt="{{ shop.name }}" />
+          <img src="{{ 'logo_navbar_image.png' | asset_url }}" alt="{{ shop.name }}" />
         {% endunless %}
         {% unless settings.logo_navbar == 'image' %}
           {{ shop.name }}
@@ -51,9 +51,6 @@
 
       <!-- Additional (Right) Navigation Links -->
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="/search" title="Search..."><span class="glyphicon glyphicon-search"></span></a>
-        </li>
         {% if shop.customer_accounts_enabled %}
           {% if customer %}
             <li>
